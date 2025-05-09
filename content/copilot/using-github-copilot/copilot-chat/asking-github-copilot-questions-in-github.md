@@ -41,7 +41,7 @@ In immersive view, you can also preview how some file formats, such as Markdown,
 
 ## Powered by skills
 
-When using the GPT-4o and {% data variables.copilot.copilot_claude_sonnet %} models, {% data variables.product.prodname_copilot_short %} has access to a collection of skills to fetch data from {% data variables.product.github %}, which are dynamically selected based on the question you ask. You can tell which skill {% data variables.product.prodname_copilot_short %} used by clicking {% octicon "chevron-down" aria-label="the down arrow" %} to expand the status information in the chat window.
+When using the {% data variables.copilot.copilot_gpt_4o %} and {% data variables.copilot.copilot_claude_sonnet %} models, {% data variables.product.prodname_copilot_short %} has access to a collection of skills to fetch data from {% data variables.product.github %}, which are dynamically selected based on the question you ask. You can tell which skill {% data variables.product.prodname_copilot_short %} used by clicking {% octicon "chevron-down" aria-label="the down arrow" %} to expand the status information in the chat window.
 
 ![Screenshot of the {% data variables.product.prodname_copilot_short %} chat panel with the status information expanded and the skill that was used highlighted with an orange outline.](/assets/images/help/copilot/chat-show-skill.png)
 
@@ -349,7 +349,17 @@ You can attach an image to {% data variables.product.prodname_copilot_short %} a
 ### Attaching an image to your chat prompt
 
 1. Go to the immersive view of {% data variables.product.prodname_copilot_chat_short %} ([https://github.com/copilot](https://github.com/copilot)).
-1. Make sure you have **GPT-4o** selected in the AI model picker at the top of the page.
+1. If you see the AI model picker at the top of the page, select one of the models that supports adding images to prompts:
+
+   * {% data variables.copilot.copilot_gpt_41 %} (the default that's used if you don't see a model picker)
+   * {% data variables.copilot.copilot_gpt_4o %}
+   * {% data variables.copilot.copilot_claude_sonnet_35 %}
+   * {% data variables.copilot.copilot_claude_sonnet_37 %}
+   * {% data variables.copilot.copilot_gemini_flash %}
+   * {% data variables.copilot.copilot_gemini_25_pro %}
+
+   ![Screenshot of the model picker with the list of models expanded.](/assets/images/help/copilot/model-picker-copilot-immersive.png)
+
 1. Do one of the following:
 
    * Copy an image and paste it into the prompt box at the bottom of the page.
@@ -399,15 +409,18 @@ You can access {% data variables.product.prodname_copilot_short %}'s immersive v
 
 > [!NOTE] This feature is currently in {% data variables.release-phases.public_preview %} and subject to change. During the {% data variables.release-phases.public_preview %}, this feature is only available to users without enterprise or team memberships.
 
-You can share {% data variables.product.prodname_copilot_chat_short %} conversations from the immersive view ([https://github.com/copilot](https://github.com/copilot)). Shared conversations are public or private (i.e. permission-based), for example, a conversation about a private repository. If you share a private conversation, the recipient must have the necessary permissions to view the content. Shared conversations are read-only—the recipient can view the conversation but cannot interact.
+You can share {% data variables.product.prodname_copilot_chat_short %} conversations from the immersive view ([https://github.com/copilot](https://github.com/copilot)). Shared conversations are public or private (i.e. permission-based), depending on the referenced content, for example, a conversation about a private repository. If you share a private conversation, the recipient must have the necessary permissions to view the content.
+
+Once you share a conversation, the conversation and future messages will be visible to anyone with the link.
 
 1. In the top right of any page on {% data variables.product.github %}, click the **{% octicon "copilot" aria-hidden="true" %}** {% data variables.product.prodname_copilot %} icon next to the search bar.
 1. To view a conversation in immersive mode, click **{% octicon "screen-full" aria-hidden="true" %} Immersive**.
-1. Once you submit your first prompt, a share button will appear in the upper right corner. Click {% octicon "share" aria-label="Share" %} to open the share dialog.
+1. Once you submit your first prompt, a share button will appear in the upper right corner. Click **{% octicon "lock" aria-hidden="true" %} Share** to open the share dialog.
 
    ![Screenshot of the main search box on {% data variables.product.prodname_dotcom %}. The share button is highlighted with an orange outline.](/assets/images/help/copilot/chat-share-button.png)
 
-1. To copy the conversation link, click **{% octicon "link" aria-label="Copy conversation link" %} Create link**. The link is copied to your clipboard.
+1. To share the conversation, click **Share**. This will generate a link to the conversation.
+1. To copy the conversation link, click the **{% octicon "copy" aria-label="Copy conversation icon" %}** copy icon. The link is copied to your clipboard.
 
 ## Sharing feedback about {% data variables.product.prodname_copilot_chat_dotcom %}
 

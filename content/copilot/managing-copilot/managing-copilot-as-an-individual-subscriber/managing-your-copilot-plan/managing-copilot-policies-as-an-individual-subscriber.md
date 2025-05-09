@@ -19,16 +19,6 @@ redirect_from:
 
 In addition to the configuration for the {% data variables.product.prodname_copilot %} plugin in your supported IDE, you can configure settings for {% data variables.product.prodname_copilot %} on {% data variables.product.github %}. The settings apply wherever you use {% data variables.product.prodname_copilot %}.
 
-## Enabling additional {% data variables.product.prodname_copilot_short %} premium requests
-
-<!-- expires 2025-05-05 -->
-{% data reusables.copilot.unlimited-premium-requests %}
-<!-- end expires 2025-05-05 -->
-
-{% data reusables.copilot.premium-requests-billing-platform %}
-
-If you enable this setting, additional premium requests beyond the limit of your {% data variables.product.prodname_copilot_short %} plan will be billed at {% data variables.copilot.additional_premium_requests %} per premium request. You will be charged for each additional premium request you use across all {% data variables.product.prodname_copilot_short %} interfaces, including {% data variables.product.prodname_mobile %}. See [AUTOTITLE](/copilot/managing-copilot/managing-copilot-as-an-individual-subscriber/monitoring-usage-and-entitlements/avoiding-unexpected-copilot-costs).
-
 ## Enabling or disabling suggestions matching public code
 
 > [!NOTE] If you are a member of an organization on {% data variables.product.prodname_ghe_cloud %} who has been assigned a {% data variables.product.prodname_copilot %} seat through your organization, you will not be able to configure suggestions matching public code in your personal account settings. Your setting for suggestions matching public code will be inherited from your organization or enterprise.
@@ -54,7 +44,7 @@ You can choose whether your prompts and {% data variables.product.prodname_copil
 You can choose whether to allow the following AI models to be used as an alternative to {% data variables.product.prodname_copilot_short %}'s default model.
 
 * {% data variables.copilot.copilot_claude_sonnet %} - see [AUTOTITLE](/copilot/using-github-copilot/ai-models/using-claude-sonnet-in-github-copilot)
-* {% data variables.copilot.copilot_gemini_flash %} - see [AUTOTITLE](/copilot/using-github-copilot/ai-models/using-gemini-flash-in-github-copilot)
+* {% data variables.copilot.copilot_gemini %} - see [AUTOTITLE](/copilot/using-github-copilot/ai-models/using-gemini-in-github-copilot)
 
 {% data reusables.user-settings.copilot-settings %}
 1. To the right of the model name, select the dropdown menu, then click **Enabled** or **Disabled**.
