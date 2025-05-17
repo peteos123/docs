@@ -1,7 +1,7 @@
 ---
 title: Configuring global security settings for your organization
 shortTitle: Configure global settings
-intro: 'Customize {% data variables.product.prodname_GH_advanced_security %} features to strengthen the security of your organization.'
+intro: 'Customize {% data variables.product.prodname_AS %} features to strengthen the security of your organization.'
 permissions: '{% data reusables.permissions.security-org-enable %}'
 versions:
   feature: security-configurations
@@ -14,7 +14,7 @@ topics:
 
 ## About {% data variables.product.prodname_global_settings %}
 
-Alongside {% data variables.product.prodname_security_configurations %}, which determine repository-level security settings, you should also configure {% data variables.product.prodname_global_settings %} for your organization. {% data variables.product.prodname_global_settings_caps %} apply to your entire organization, and can customize {% data variables.product.prodname_GH_advanced_security %} features based on your needs. {% ifversion ghes < 3.16 %}You can also create a team of security managers to monitor and maintain your organization's security.{% endif %}
+Alongside {% data variables.product.prodname_security_configurations %}, which determine repository-level security settings, you should also configure {% data variables.product.prodname_global_settings %} for your organization. {% data variables.product.prodname_global_settings_caps %} apply to your entire organization, and can customize {% data variables.product.prodname_AS %} features based on your needs. {% ifversion ghes < 3.16 %}You can also create a team of security managers to monitor and maintain your organization's security.{% endif %}
 
 ## Accessing the {% data variables.product.prodname_global_settings %} page for your organization
 
@@ -68,12 +68,19 @@ To update private dependencies of repositories in your organization, {% data var
 
 {% data reusables.code-scanning.about-code-scanning %}
 
+{% ifversion ghes > 3.16 %}
+<!-- There is only one bullet point in this section, so we don't display a list for GHES 3.17. -->
+{% else %}
+
 You can customize several {% data variables.product.prodname_global_settings %} for {% data variables.product.prodname_code_scanning %}:
 
-* [Recommending the extended query suite for default setup](#recommending-the-extended-query-suite-for-default-setup){% ifversion code-scanning-autofix %}
+{% ifversion code-scanning-autofix %}
 * [Enabling {% data variables.product.prodname_copilot_autofix_short %} for {% data variables.product.prodname_codeql %}](#enabling-copilot-autofix-for-codeql)
-* [Enabling {% data variables.product.prodname_copilot_autofix_short %} for third-party {% data variables.product.prodname_code_scanning %} tools](#enabling-copilot-autofix-for-third-party-code-scanning-tools) {% endif %}{% ifversion ghes < 3.17 %}
+* [Enabling {% data variables.product.prodname_copilot_autofix_short %} for third-party {% data variables.product.prodname_code_scanning %} tools](#enabling-copilot-autofix-for-third-party-code-scanning-tools) {% endif %}
+* [Recommending the extended query suite for default setup](#recommending-the-extended-query-suite-for-default-setup){% ifversion ghes < 3.17 %}
 * [Setting a failure threshold for {% data variables.product.prodname_code_scanning %} checks in pull requests](#setting-a-failure-threshold-for-code-scanning-checks-in-pull-requests){% endif %}
+
+{% endif %}
 
 ### Recommending the extended query suite for default setup
 
@@ -113,7 +120,7 @@ You can customize several {% data variables.product.prodname_global_settings %} 
 
 ### Adding a resource link for blocked commits
 
-To provide context for developers when {% data variables.product.prodname_secret_scanning %} blocks a commit, you can display a link with more information on why the commit was blocked. To include a link, select **Add a resource link in the CLI and the web UI when a commit is blocked**. In the text box, type the link to the desired resource, then click **Save**.
+To provide context for developers when {% data variables.product.prodname_secret_scanning %} blocks a commit, you can display a link with more information on why the commit was blocked. To include a link, select **Add a resource link in the CLI and the web UI when a commit is blocked**. In the text box, type the link to the desired resource, then click {% ifversion fpt or ghec or ghes > 3.15 %}**Save Link**{% else %}**Save**{% endif %}.
 
 ### Defining custom patterns
 

@@ -190,9 +190,9 @@ Installing the {% data variables.product.prodname_copilot %} extension for Xcode
 
 To see instructions for other popular coding environments, use the tool switcher at the top of the page.
 
-## Prerequisites
+### Version compatibility
 
-{% data reusables.copilot.xcode-prerequisites %}
+To use {% data variables.product.prodname_copilot %} for Xcode you must have Xcode version 8.0 or above and macOS Monterey (12.0) or above installed. See [Xcode](https://developer.apple.com/xcode/) on the Apple Developer site.
 
 ## Installing the {% data variables.product.prodname_copilot %} extension for Xcode
 
@@ -206,8 +206,8 @@ Two permissions are required to be able to use the extension: "Accessibility" an
 
 The "Xcode Source Editor Extension" permission needs to be enabled manually.
 
-1. Open the {% data variables.product.prodname_copilot %} extension application.
-1. Click **Extension Permission** and click **Xcode Source Editor**.
+1. Open the {% data variables.product.prodname_copilot %} for Xcode application.
+1. Click **Extension Permission**.
 1. Enable {% data variables.product.prodname_copilot %} and click **Done**.
 
 After granting the required permissions, restart Xcode. You will see a new item in the "Editor" menu called "{% data variables.product.prodname_copilot %}".
@@ -218,7 +218,7 @@ Before you can use the {% data variables.product.prodname_copilot %} extension f
 
 >[!NOTE] {% data reusables.copilot.sign-in-ghecom %} See [AUTOTITLE](/copilot/managing-copilot/configure-personal-settings/using-github-copilot-with-an-account-on-ghecom?tool=xcode#authenticating-from-xcode).
 
-1. Open the {% data variables.product.prodname_copilot %} extension application.
+1. Open the {% data variables.product.prodname_copilot %} for Xcode application.
 1. Click **Login to {% data variables.product.github %}** and follow the prompts to authorize the extension.
 
 {% endxcode %}
@@ -229,13 +229,11 @@ Before you can use the {% data variables.product.prodname_copilot %} extension f
 
 Installing {% data variables.product.prodname_copilot %} in Eclipse allows you to receive coding suggestions from {% data variables.product.prodname_copilot_short %} as you type. You also automatically get access to {% data variables.product.prodname_copilot_chat %}, which allows you to chat with {% data variables.product.prodname_copilot_short %}.
 
-{% data reusables.copilot.eclipse-public-preview-note %}
-
 To see instructions for other popular coding environments, use the tool switcher at the top of the page.
 
-## Prerequisites
+### Version compatibility
 
-{% data reusables.copilot.eclipse-prerequisites %}
+To use the {% data variables.product.prodname_copilot %} extension, you must have Eclipse version 2024-09 or above. See the [Eclipse download page](https://www.eclipse.org/downloads/packages/).
 
 ## Installing {% data variables.product.prodname_copilot %} in Eclipse
 
